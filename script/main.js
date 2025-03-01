@@ -10,10 +10,12 @@ var settings = {
   "headers" :{}
 }
 $.ajax(settings).done(function(response) {
+   
+   
   
-  btc.innerHTML = response.data[0].priceUsd
-  eth.innerHTML = response.data[1].priceUsd
-  doge.innerHTML = response.data[7].priceUsd
+  btc.innerHTML = Math.round(response.data[0].priceUsd)
+  eth.innerHTML = Math.round(response.data[1].priceUsd)
+  doge.innerHTML = Math.round(response.data[7].priceUsd)
 })
 
 
